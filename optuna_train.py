@@ -31,5 +31,5 @@ if __name__ == '__main__':
         objective,
         n_jobs=1,  # number of processes in parallel execution
         n_trials=1,  # number of trials to train a model
-        timeout=None,  # threshold for executing time
+        timeout=None,  # threshold for executing time (sec)
     )
