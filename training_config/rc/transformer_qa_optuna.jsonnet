@@ -40,7 +40,7 @@ local batch_size = 8;
     },
     "grad_clipping": std.extVar("grad_clipping"),
     "num_epochs": epochs,
-    "cuda_device": -1
+    "cuda_device": 0,
   },
   "random_seed": 42,
   "numpy_seed": 42,
