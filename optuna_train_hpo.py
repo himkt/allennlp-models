@@ -15,7 +15,7 @@ metric = "best_validation_per_instance_em"
 
 def objective(trial: optuna.Trial) -> float:
     # begin hyperparameter space
-    trial.suggest_float("grad_clipping", 0.0, 2.0)
+    trial.suggest_float("grad_clipping", 0.0, 5.0)
     trial.suggest_float("lr", 1e-5, 3e-5, log=True)
     # end   hyperparameter space
 
