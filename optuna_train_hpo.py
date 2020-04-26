@@ -31,8 +31,9 @@ def objective(trial: optuna.Trial) -> float:
 
 if __name__ == '__main__':
     study = optuna.create_study(
+        storage="sqlite:///examle.db",  # save results in DB
+        study_name="optuna_allennlp_demo",
         direction="maximize",
-        storage="sqlite:///examle.db"  # save results in DB
     )
 
     timeout = 60 * 60 * 5  # timeout (sec): 60*60*5 sec => 5hours
