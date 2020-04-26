@@ -32,7 +32,7 @@ local batch_size = 8;
       "parameter_groups": [[["bias", "LayerNorm\\.weight", "layer_norm\\.weight"], {"weight_decay": 0}]],
       "lr": std.extVar("lr"),
       "eps": 1e-8,
-      "validation_metric: "per_instance_em",
+      "validation_metric": "per_instance_em",
     },
     "learning_rate_scheduler": {
       "type": "slanted_triangular",
