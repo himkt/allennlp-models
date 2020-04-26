@@ -32,7 +32,6 @@ local batch_size = 8;
       "parameter_groups": [[["bias", "LayerNorm\\.weight", "layer_norm\\.weight"], {"weight_decay": 0}]],
       "lr": std.extVar("lr"),
       "eps": 1e-8,
-      "validation_metric": "per_instance_em",
     },
     "learning_rate_scheduler": {
       "type": "slanted_triangular",
@@ -42,6 +41,7 @@ local batch_size = 8;
     "grad_clipping": std.extVar("grad_clipping"),
     "num_epochs": epochs,
     "cuda_device": 0,
+    "validation_metric": "+per_instance_em",
   },
   "random_seed": 42,
   "numpy_seed": 42,
