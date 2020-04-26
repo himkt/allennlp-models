@@ -35,11 +35,12 @@ if __name__ == '__main__':
         storage="sqlite:///examle.db"  # save results in DB
     )
 
+    timeout = 60 * 60 * 5  # timeout (sec): 60*60*5 sec => 5hours
     study.optimize(
         objective,
         n_jobs=1,  # number of processes in parallel execution
-        n_trials=5,  # number of trials to train a model
-        timeout=None,  # threshold for executing time (sec)
+        n_trials=10,  # number of trials to train a model
+        timeout=timeout,  # threshold for executing time (sec)
     )
 
     print("Number of finished trials: ", len(study.trials))
